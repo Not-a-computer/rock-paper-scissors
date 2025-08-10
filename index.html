@@ -6,7 +6,66 @@
     <title>Document</title>
      <link rel="stylesheet" href="styles.css">
      
+     
 </head>
 <body>
+<script>
+
+
+    function rps () {
+        let userChoice = prompt('Please select: Rock(r)/Paper(p)/Scissors(s).').toLowerCase();
+        while (!~['r', 'p', 's'].indexOf(userChoice)){
+            userChoice = prompt('Invalid Input. Please select: Rock(r)/Paper(p)/Scissors(s)')};
+            
+        let cpuChoice = Math.floor(Math.random() * 3);
+        
+        switch (cpuChoice){
+            case 0:
+                if (userChoice = 'r') {
+                    alert('Draw');
+                } else if (userChoice = 'p') {
+                    alert ('You Win');
+                } else if (userChoice = 's') {
+                    alert('You Lose');
+                }
+                return;
+            case 1:
+                if (userChoice = 'r') {
+                    alert('You Lose');
+                } else if (userChoice = 'p') {
+                    alert ('Draw');
+                } else if (userChoice = 's') {
+                    alert('You Win');
+                }
+                return;
+            case 2:
+                if (userChoice = 'r') {
+                    alert('You Win');
+                } else if (userChoice = 'p') {
+                    alert ('You Lose');
+                } else if (userChoice = 's') {
+                    alert('Draw');
+                }
+                return;
+
+        }
+    }
+
+    let playState = true
+    while (playState == true) {
+        rps();
+        let rematch = prompt('Rematch? (y/n)');
+        while (!~['y', 'n'].indexOf(rematch)){
+            rematch = prompt('Invalid Input. Rematch? (y/n)')};
+        if (rematch == 'y') {
+            playState = true;
+        } else{
+            playState = false;
+        }
+    }
+
+    
+        
+</script>
 </body>
 </html>
